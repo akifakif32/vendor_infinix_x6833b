@@ -29915,17 +29915,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-android_app_import {
-    name: "TranssionCamera",
-    owner: "infinix",
-    apk: "proprietary/system_ext/app/TranssionCamera/TranssionCamera.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
-}
-
 prebuilt_etc_xml {
     name: "android.hardware.biometrics.fingerprint@2.1-service.xml",
     owner: "infinix",
