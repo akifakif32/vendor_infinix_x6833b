@@ -395,7 +395,6 @@ PRODUCT_PACKAGES += \
     libverno \
     libwo \
     arm.graphics-V1-ndk_platform \
-    libaiselector \
     libmtk_drvb \
     vendor.mediatek.hardware.videotelephony@1.0 \
     libHEVCdec_sa.ca7.android \
@@ -1137,6 +1136,7 @@ PRODUCT_PACKAGES += \
     libaibc_tuning_p3 \
     libaibc_tuning_p4 \
     libaidepth_tuning \
+    libaiselector \
     libamipengine \
     libanc_dc_base \
     libarcsoft_high_dynamic_range \
@@ -1457,7 +1457,6 @@ PRODUCT_PACKAGES += \
     vendor_bin_hw_camerahalserver \
     vendor_bin_v3avpud \
     vendor_lib_arm_graphics-V1-ndk_platform_so \
-    vendor_lib_libaiselector_so \
     vendor_lib_libmtk_drvb_so \
     vendor_lib_libvcodec_utility_so \
     vendor_lib_libvcodec_utility_v3a_so \

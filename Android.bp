@@ -1103,46 +1103,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaiselector",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/mt6789/libaiselector.so",
-            ],
-            shared_libs: [
-                "libpq_prot",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/mt6789/libaiselector.so",
-            ],
-            shared_libs: [
-                "libpq_prot",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    relative_install_path: "mt6789",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libmtk_drvb",
     owner: "infinix",
     strip: {
@@ -21083,6 +21043,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libaiselector",
+    owner: "infinix",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/mt6789/libaiselector.so",
+            ],
+            shared_libs: [
+                "libpq_prot",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "mt6789",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libamipengine",
     owner: "infinix",
     strip: {
@@ -31520,13 +31507,6 @@ install_symlink {
     soc_specific: true,
     installed_location: "lib/arm.graphics-V1-ndk_platform.so",
     symlink_target: "/vendor/lib/mt6789/arm.graphics-V1-ndk_platform.so",
-}
-
-install_symlink {
-    name: "vendor_lib_libaiselector_so",
-    soc_specific: true,
-    installed_location: "lib/libaiselector.so",
-    symlink_target: "/vendor/lib/mt6789/libaiselector.so",
 }
 
 install_symlink {
