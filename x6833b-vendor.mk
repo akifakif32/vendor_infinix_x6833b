@@ -366,7 +366,6 @@ PRODUCT_COPY_FILES += \
     vendor/infinix/x6833b/proprietary/vendor/firmware/soc_fm_v1_patch.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc_fm_v1_patch.bin \
     vendor/infinix/x6833b/proprietary/vendor/firmware/wifi.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi.cfg \
     vendor/infinix/x6833b/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
-    vendor/infinix/x6833b/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.solo:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.solo \
     vendor/infinix/x6833b/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf
 
 PRODUCT_PACKAGES += \
@@ -376,7 +375,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.videotelephony@1.0-impl \
     libAVCSecureVencCA_510 \
     libTEECommon \
-    libaiselector \
     libbwc \
     libccci_util \
     libgz_gp_client \
@@ -386,7 +384,6 @@ PRODUCT_PACKAGES += \
     libion_ulit \
     libipsec_ims_shr \
     libladder \
-    libmtk_drvb \
     libmtkcutils \
     libmtkproperty \
     libmtkrillog \
@@ -398,6 +395,7 @@ PRODUCT_PACKAGES += \
     libverno \
     libwo \
     arm.graphics-V1-ndk_platform \
+    libaiselector \
     libmtk_drvb \
     vendor.mediatek.hardware.videotelephony@1.0 \
     libHEVCdec_sa.ca7.android \
@@ -431,14 +429,6 @@ PRODUCT_PACKAGES += \
     libMEOW_qt \
     libMEOW_trace \
     libGLES_mali \
-    fake_serial_yuv_IdxMgr \
-    fake_serial_yuv_tuning \
-    gc02m1_mipi_raw_IdxMgr \
-    gc02m1_mipi_raw_tuning \
-    hi1631q_mipi_raw_IdxMgr \
-    hi1631q_mipi_raw_tuning \
-    hi1634q_mipi_raw_IdxMgr \
-    hi1634q_mipi_raw_tuning \
     android.hardware.gnss-impl-mediatek \
     android.hardware.gnss@2.1-impl-mediatek \
     audio.primary.mediatek \
@@ -449,69 +439,26 @@ PRODUCT_PACKAGES += \
     kmsetkey.trustonic \
     libMcGatekeeper \
     libSoftGatekeeper \
+    android.hardware.camera.provider@2.6-impl-mediatek \
     android.hardware.graphics.allocator@4.0-impl-mediatek \
     android.hardware.graphics.mapper@4.0-impl-mediatek \
     gralloc.common \
-    vendor.mediatek.hardware.pq@2.15-impl \
-    vulkan.mali \
-    sensors.mediatek.V2.0 \
-    sound_trigger.primary.mt6789 \
     vendor.mediatek.hardware.camera.atms@1.0-impl \
     vendor.mediatek.hardware.camera.bgservice@1.1-impl \
     vendor.mediatek.hardware.camera.ccap@1.0-impl \
     vendor.mediatek.hardware.camera.isphal@1.0-impl \
     vendor.mediatek.hardware.camera.isphal@1.1-impl \
     vendor.mediatek.hardware.camera.lomoeffect@1.0-impl \
+    vendor.mediatek.hardware.pq@2.15-impl \
+    vulkan.mali \
+    sensors.mediatek.V2.0 \
+    sound_trigger.primary.mt6789 \
     vendor.mediatek.hardware.keymaster_attestation@1.1-impl \
     vendor.mediatek.hardware.mms@1.6-impl \
     vendor.mediatek.hardware.nvram@1.1-impl \
     lbs_hidl_service-impl \
-    lib3a.ae.core \
     lib3a.ae.pipe \
-    lib3a.ae \
-    lib3a.ae.stat \
-    lib3a.af.assist \
-    lib3a.af.assist.utils \
-    lib3a.af.core \
-    lib3a.af \
-    lib3a.aishutter.models \
-    lib3a.alsflicker \
-    lib3a.awb.core \
-    lib3a.ccudrv \
-    lib3a.ccuif \
-    lib3a.custom.ae \
-    lib3a.dce \
-    lib3a.flash \
-    lib3a.flicker \
-    lib3a.gma \
-    lib3a.lce \
-    lib3a.log \
-    lib3a.n3d3a \
-    lib3a.sensors.color \
-    lib3a.sensors.flicker \
     libBasicModule \
-    libCamera_fakeserialyuv_E2EHDR_Preview \
-    libCamera_fakeserialyuv_E2EHDR_Video \
-    libCamera_fakeserialyuv_Face_Capture \
-    libCamera_fakeserialyuv_Flash_Capture \
-    libCamera_fakeserialyuv_HDR_Capture \
-    libCamera_fakeserialyuv_HDR_Preview \
-    libCamera_fakeserialyuv_HDR_Reconfig_Preview \
-    libCamera_fakeserialyuv_HDR_Reconfig_Video \
-    libCamera_fakeserialyuv_HDR_Video \
-    libCamera_fakeserialyuv_N3D_Capture \
-    libCamera_fakeserialyuv_N3D_Preview \
-    libCamera_fakeserialyuv_N3D_Video \
-    libCamera_fakeserialyuv_P1_YUV \
-    libCamera_fakeserialyuv_Scene_Capture \
-    libCamera_fakeserialyuv_Scene_Capture_4cell \
-    libCamera_fakeserialyuv_Scene_Preview \
-    libCamera_fakeserialyuv_Scene_Preview_4k \
-    libCamera_fakeserialyuv_Scene_Preview_ZSD_Flash \
-    libCamera_fakeserialyuv_Video_1080 \
-    libCamera_fakeserialyuv_Video_4k \
-    libCamera_gc02m1mipiraw_Scene_Capture \
-    libCamera_gc02m1mipiraw_Scene_Preview \
     libCamera_hi1631qmipiraw_360HDR \
     libCamera_hi1631qmipiraw_3rd_Capture \
     libCamera_hi1631qmipiraw_3rd_Capture_FD \
@@ -527,7 +474,6 @@ PRODUCT_PACKAGES += \
     libCamera_hi1631qmipiraw_FaceBeauty_Preview \
     libCamera_hi1631qmipiraw_FilmVideo \
     libCamera_hi1631qmipiraw_Film_Capture \
-    libCamera_hi1631qmipiraw_Flash_Capture \
     libCamera_hi1631qmipiraw_HDR_MINUS_EV \
     libCamera_hi1631qmipiraw_NHDR_0EV \
     libCamera_hi1631qmipiraw_Preview_Zoom1 \
@@ -535,15 +481,11 @@ PRODUCT_PACKAGES += \
     libCamera_hi1631qmipiraw_Resolution \
     libCamera_hi1631qmipiraw_Resolution_Preview \
     libCamera_hi1631qmipiraw_Resolution_zoom \
-    libCamera_hi1631qmipiraw_Scene_Capture \
-    libCamera_hi1631qmipiraw_Scene_Capture_4cell \
     libCamera_hi1631qmipiraw_Scene_EIS_Video \
-    libCamera_hi1631qmipiraw_Scene_Preview \
     libCamera_hi1631qmipiraw_ShortVideo \
     libCamera_hi1631qmipiraw_SuperFlashLight_Capture \
     libCamera_hi1631qmipiraw_SuperNight \
     libCamera_hi1631qmipiraw_TimeLapse_video \
-    libCamera_hi1631qmipiraw_Video_1080 \
     libCamera_hi1631qmipiraw_Video_1080_60fps \
     libCamera_hi1631qmipiraw_Video_1080_Zoom1 \
     libCamera_hi1631qmipiraw_Video_2k \
@@ -564,7 +506,6 @@ PRODUCT_PACKAGES += \
     libCamera_hi1634qmipiraw_FaceBeauty \
     libCamera_hi1634qmipiraw_FaceBeauty_Preview \
     libCamera_hi1634qmipiraw_FilmVideo \
-    libCamera_hi1634qmipiraw_Flash_Capture \
     libCamera_hi1634qmipiraw_G99_Film_Capture \
     libCamera_hi1634qmipiraw_HDR_MINUS_EV \
     libCamera_hi1634qmipiraw_MT_Capture \
@@ -575,17 +516,13 @@ PRODUCT_PACKAGES += \
     libCamera_hi1634qmipiraw_Resolution \
     libCamera_hi1634qmipiraw_Resolution_Preview \
     libCamera_hi1634qmipiraw_Resolution_zoom \
-    libCamera_hi1634qmipiraw_Scene_Capture \
-    libCamera_hi1634qmipiraw_Scene_Capture_4cell \
     libCamera_hi1634qmipiraw_Scene_EIS_Video \
-    libCamera_hi1634qmipiraw_Scene_Preview \
     libCamera_hi1634qmipiraw_ShortVideo \
     libCamera_hi1634qmipiraw_SuperNight \
     libCamera_hi1634qmipiraw_Super_Flash_Screen \
     libCamera_hi1634qmipiraw_Super_Flash_ScreenTorch \
     libCamera_hi1634qmipiraw_Super_Flash_torch \
     libCamera_hi1634qmipiraw_TimeLapse_video \
-    libCamera_hi1634qmipiraw_Video_1080 \
     libCamera_hi1634qmipiraw_Video_1080_60fps \
     libCamera_hi1634qmipiraw_Video_1080_Zoom1 \
     libCamera_hi1634qmipiraw_Video_2k \
@@ -605,7 +542,6 @@ PRODUCT_PACKAGES += \
     libCamera_ov64b40mipiraw_FD_Capture_Zoom2 \
     libCamera_ov64b40mipiraw_Facebeauty_Capture \
     libCamera_ov64b40mipiraw_Film_Capture \
-    libCamera_ov64b40mipiraw_Flash_Capture \
     libCamera_ov64b40mipiraw_MagicSky_Capture \
     libCamera_ov64b40mipiraw_NHDR_0EV \
     libCamera_ov64b40mipiraw_Preview_Zoom1 \
@@ -619,11 +555,8 @@ PRODUCT_PACKAGES += \
     libCamera_ov64b40mipiraw_Resolution_mfnr_2x \
     libCamera_ov64b40mipiraw_Resolution_mfnr_5x \
     libCamera_ov64b40mipiraw_Resolution_zoom \
-    libCamera_ov64b40mipiraw_Scene_Capture \
-    libCamera_ov64b40mipiraw_Scene_Capture_4cell \
     libCamera_ov64b40mipiraw_Scene_Capture_Remosaic \
     libCamera_ov64b40mipiraw_Scene_PreFlash_Preview \
-    libCamera_ov64b40mipiraw_Scene_Preview \
     libCamera_ov64b40mipiraw_SuperNight \
     libCamera_ov64b40mipiraw_Video \
     libCamera_ov64b40mipiraw_Video_1080p \
@@ -633,8 +566,6 @@ PRODUCT_PACKAGES += \
     libCamera_ov64b40mipiraw_Video_EIS \
     libCamera_ov64b40mipiraw_Video_Zoom1 \
     libCamera_ov64b40mipiraw_Video_Zoom2 \
-    libCamera_pblcgc02m1mipiraw_Scene_Capture \
-    libCamera_pblcgc02m1mipiraw_Scene_Preview \
     libCamera_pblchi1631qmipiraw_360HDR \
     libCamera_pblchi1631qmipiraw_3rd_Capture \
     libCamera_pblchi1631qmipiraw_3rd_Capture_FD \
@@ -650,7 +581,6 @@ PRODUCT_PACKAGES += \
     libCamera_pblchi1631qmipiraw_FaceBeauty_Preview \
     libCamera_pblchi1631qmipiraw_FilmVideo \
     libCamera_pblchi1631qmipiraw_Film_Capture \
-    libCamera_pblchi1631qmipiraw_Flash_Capture \
     libCamera_pblchi1631qmipiraw_HDR_MINUS_EV \
     libCamera_pblchi1631qmipiraw_NHDR_0EV \
     libCamera_pblchi1631qmipiraw_Preview_Zoom1 \
@@ -658,15 +588,11 @@ PRODUCT_PACKAGES += \
     libCamera_pblchi1631qmipiraw_Resolution \
     libCamera_pblchi1631qmipiraw_Resolution_Preview \
     libCamera_pblchi1631qmipiraw_Resolution_zoom \
-    libCamera_pblchi1631qmipiraw_Scene_Capture \
-    libCamera_pblchi1631qmipiraw_Scene_Capture_4cell \
     libCamera_pblchi1631qmipiraw_Scene_EIS_Video \
-    libCamera_pblchi1631qmipiraw_Scene_Preview \
     libCamera_pblchi1631qmipiraw_ShortVideo \
     libCamera_pblchi1631qmipiraw_SuperFlashLight_Capture \
     libCamera_pblchi1631qmipiraw_SuperNight \
     libCamera_pblchi1631qmipiraw_TimeLapse_video \
-    libCamera_pblchi1631qmipiraw_Video_1080 \
     libCamera_pblchi1631qmipiraw_Video_1080_60fps \
     libCamera_pblchi1631qmipiraw_Video_1080_Zoom1 \
     libCamera_pblchi1631qmipiraw_Video_2k \
@@ -687,7 +613,6 @@ PRODUCT_PACKAGES += \
     libCamera_pblchi1634qmipiraw_FaceBeauty \
     libCamera_pblchi1634qmipiraw_FaceBeauty_Preview \
     libCamera_pblchi1634qmipiraw_FilmVideo \
-    libCamera_pblchi1634qmipiraw_Flash_Capture \
     libCamera_pblchi1634qmipiraw_G99_Film_Capture \
     libCamera_pblchi1634qmipiraw_HDR_MINUS_EV \
     libCamera_pblchi1634qmipiraw_MT_Capture \
@@ -698,17 +623,13 @@ PRODUCT_PACKAGES += \
     libCamera_pblchi1634qmipiraw_Resolution \
     libCamera_pblchi1634qmipiraw_Resolution_Preview \
     libCamera_pblchi1634qmipiraw_Resolution_zoom \
-    libCamera_pblchi1634qmipiraw_Scene_Capture \
-    libCamera_pblchi1634qmipiraw_Scene_Capture_4cell \
     libCamera_pblchi1634qmipiraw_Scene_EIS_Video \
-    libCamera_pblchi1634qmipiraw_Scene_Preview \
     libCamera_pblchi1634qmipiraw_ShortVideo \
     libCamera_pblchi1634qmipiraw_SuperNight \
     libCamera_pblchi1634qmipiraw_Super_Flash_Screen \
     libCamera_pblchi1634qmipiraw_Super_Flash_ScreenTorch \
     libCamera_pblchi1634qmipiraw_Super_Flash_torch \
     libCamera_pblchi1634qmipiraw_TimeLapse_video \
-    libCamera_pblchi1634qmipiraw_Video_1080 \
     libCamera_pblchi1634qmipiraw_Video_1080_60fps \
     libCamera_pblchi1634qmipiraw_Video_1080_Zoom1 \
     libCamera_pblchi1634qmipiraw_Video_2k \
@@ -728,7 +649,6 @@ PRODUCT_PACKAGES += \
     libCamera_pblcov64b40mipiraw_FD_Capture_Zoom2 \
     libCamera_pblcov64b40mipiraw_Facebeauty_Capture \
     libCamera_pblcov64b40mipiraw_Film_Capture \
-    libCamera_pblcov64b40mipiraw_Flash_Capture \
     libCamera_pblcov64b40mipiraw_MagicSky_Capture \
     libCamera_pblcov64b40mipiraw_NHDR_0EV \
     libCamera_pblcov64b40mipiraw_Preview_Zoom1 \
@@ -742,11 +662,8 @@ PRODUCT_PACKAGES += \
     libCamera_pblcov64b40mipiraw_Resolution_mfnr_2x \
     libCamera_pblcov64b40mipiraw_Resolution_mfnr_5x \
     libCamera_pblcov64b40mipiraw_Resolution_zoom \
-    libCamera_pblcov64b40mipiraw_Scene_Capture \
-    libCamera_pblcov64b40mipiraw_Scene_Capture_4cell \
     libCamera_pblcov64b40mipiraw_Scene_Capture_Remosaic \
     libCamera_pblcov64b40mipiraw_Scene_PreFlash_Preview \
-    libCamera_pblcov64b40mipiraw_Scene_Preview \
     libCamera_pblcov64b40mipiraw_SuperNight \
     libCamera_pblcov64b40mipiraw_Video \
     libCamera_pblcov64b40mipiraw_Video_1080p \
@@ -756,8 +673,6 @@ PRODUCT_PACKAGES += \
     libCamera_pblcov64b40mipiraw_Video_EIS \
     libCamera_pblcov64b40mipiraw_Video_Zoom1 \
     libCamera_pblcov64b40mipiraw_Video_Zoom2 \
-    libCamera_pbrogc02m1mipiraw_Scene_Capture \
-    libCamera_pbrogc02m1mipiraw_Scene_Preview \
     libCamera_pbrohi1631qmipiraw_360HDR \
     libCamera_pbrohi1631qmipiraw_3rd_Capture \
     libCamera_pbrohi1631qmipiraw_3rd_Capture_FD \
@@ -773,7 +688,6 @@ PRODUCT_PACKAGES += \
     libCamera_pbrohi1631qmipiraw_FaceBeauty_Preview \
     libCamera_pbrohi1631qmipiraw_FilmVideo \
     libCamera_pbrohi1631qmipiraw_Film_Capture \
-    libCamera_pbrohi1631qmipiraw_Flash_Capture \
     libCamera_pbrohi1631qmipiraw_HDR_MINUS_EV \
     libCamera_pbrohi1631qmipiraw_NHDR_0EV \
     libCamera_pbrohi1631qmipiraw_Preview_Zoom1 \
@@ -781,15 +695,11 @@ PRODUCT_PACKAGES += \
     libCamera_pbrohi1631qmipiraw_Resolution \
     libCamera_pbrohi1631qmipiraw_Resolution_Preview \
     libCamera_pbrohi1631qmipiraw_Resolution_zoom \
-    libCamera_pbrohi1631qmipiraw_Scene_Capture \
-    libCamera_pbrohi1631qmipiraw_Scene_Capture_4cell \
     libCamera_pbrohi1631qmipiraw_Scene_EIS_Video \
-    libCamera_pbrohi1631qmipiraw_Scene_Preview \
     libCamera_pbrohi1631qmipiraw_ShortVideo \
     libCamera_pbrohi1631qmipiraw_SuperFlashLight_Capture \
     libCamera_pbrohi1631qmipiraw_SuperNight \
     libCamera_pbrohi1631qmipiraw_TimeLapse_video \
-    libCamera_pbrohi1631qmipiraw_Video_1080 \
     libCamera_pbrohi1631qmipiraw_Video_1080_60fps \
     libCamera_pbrohi1631qmipiraw_Video_1080_Zoom1 \
     libCamera_pbrohi1631qmipiraw_Video_2k \
@@ -810,7 +720,6 @@ PRODUCT_PACKAGES += \
     libCamera_pbrohi1634qmipiraw_FaceBeauty \
     libCamera_pbrohi1634qmipiraw_FaceBeauty_Preview \
     libCamera_pbrohi1634qmipiraw_FilmVideo \
-    libCamera_pbrohi1634qmipiraw_Flash_Capture \
     libCamera_pbrohi1634qmipiraw_G99_Film_Capture \
     libCamera_pbrohi1634qmipiraw_HDR_MINUS_EV \
     libCamera_pbrohi1634qmipiraw_MT_Capture \
@@ -821,17 +730,13 @@ PRODUCT_PACKAGES += \
     libCamera_pbrohi1634qmipiraw_Resolution \
     libCamera_pbrohi1634qmipiraw_Resolution_Preview \
     libCamera_pbrohi1634qmipiraw_Resolution_zoom \
-    libCamera_pbrohi1634qmipiraw_Scene_Capture \
-    libCamera_pbrohi1634qmipiraw_Scene_Capture_4cell \
     libCamera_pbrohi1634qmipiraw_Scene_EIS_Video \
-    libCamera_pbrohi1634qmipiraw_Scene_Preview \
     libCamera_pbrohi1634qmipiraw_ShortVideo \
     libCamera_pbrohi1634qmipiraw_SuperNight \
     libCamera_pbrohi1634qmipiraw_Super_Flash_Screen \
     libCamera_pbrohi1634qmipiraw_Super_Flash_ScreenTorch \
     libCamera_pbrohi1634qmipiraw_Super_Flash_torch \
     libCamera_pbrohi1634qmipiraw_TimeLapse_video \
-    libCamera_pbrohi1634qmipiraw_Video_1080 \
     libCamera_pbrohi1634qmipiraw_Video_1080_60fps \
     libCamera_pbrohi1634qmipiraw_Video_1080_Zoom1 \
     libCamera_pbrohi1634qmipiraw_Video_2k \
@@ -851,7 +756,6 @@ PRODUCT_PACKAGES += \
     libCamera_pbroov64b40mipiraw_FD_Capture_Zoom2 \
     libCamera_pbroov64b40mipiraw_Facebeauty_Capture \
     libCamera_pbroov64b40mipiraw_Film_Capture \
-    libCamera_pbroov64b40mipiraw_Flash_Capture \
     libCamera_pbroov64b40mipiraw_MagicSky_Capture \
     libCamera_pbroov64b40mipiraw_NHDR_0EV \
     libCamera_pbroov64b40mipiraw_Preview_Zoom1 \
@@ -865,11 +769,8 @@ PRODUCT_PACKAGES += \
     libCamera_pbroov64b40mipiraw_Resolution_mfnr_2x \
     libCamera_pbroov64b40mipiraw_Resolution_mfnr_5x \
     libCamera_pbroov64b40mipiraw_Resolution_zoom \
-    libCamera_pbroov64b40mipiraw_Scene_Capture \
-    libCamera_pbroov64b40mipiraw_Scene_Capture_4cell \
     libCamera_pbroov64b40mipiraw_Scene_Capture_Remosaic \
     libCamera_pbroov64b40mipiraw_Scene_PreFlash_Preview \
-    libCamera_pbroov64b40mipiraw_Scene_Preview \
     libCamera_pbroov64b40mipiraw_SuperNight \
     libCamera_pbroov64b40mipiraw_Video \
     libCamera_pbroov64b40mipiraw_Video_1080p \
@@ -881,75 +782,22 @@ PRODUCT_PACKAGES += \
     libCamera_pbroov64b40mipiraw_Video_Zoom2 \
     libDefaultFpsActor \
     libFrameRecord \
-    libImageEval \
     libJpgEncPipe \
     libMcClient \
     libMtkSpeechEnh \
     libNoFpsActor \
-    libNvLutEffect \
     libOpenCL \
     libSQLiteModule_VER_ALL \
-    libSonyIMX230PdafLibrary \
-    libSonyIMX230PdafLibraryWrapper \
-    libSonyIMX338PdafLibrary \
-    libSonyIMX338PdafLibraryWrapper \
-    libSonyIMX386PdafLibrary \
-    libSonyIMX386PdafLibraryWrapper \
-    libSonyIMX519PdafLibrary \
-    libSonyIMX519PdafLibraryWrapper \
-    libTranASD \
-    libTranArcFilter \
-    libTranArcFlashNew \
-    libTranArcHDR \
-    libTranArcLLHDR \
-    libTranArcLowLight \
-    libTranArcNightHawk \
-    libTranAutoColorLevel \
-    libTranBefMakeup \
-    libTranColorEnhance \
-    libTranDenoise \
-    libTranExtImgProc \
     libTranExtImgThread \
-    libTranEyeDetect \
-    libTranGenderDetect \
-    libTranHumanLight \
-    libTranITDFaceBeauty \
-    libTranMSFilter \
-    libTranMagicSky \
-    libTranMegDualDepth \
-    libTranMegDualDepthtoBokeh \
-    libTranMegDualRefocus \
-    libTranPlatHW \
-    libTranSTPRRepair \
-    libTranSTSingleBlur \
-    libTranSlimBody \
-    libTranSmartDetection \
-    libTranSuperResolution \
     libTranVideoFilter \
     libTranVideoLuminousEffects \
-    libTran_Log \
-    libTran_mtkPowerAPI \
-    libWaterMarkProc \
     lib_iir \
     lib_speech_enh \
-    lib_sr_indep_ocl \
-    libaaa_ltm \
-    libaaa_ltmx \
     libaal_cust \
     libaal_key \
     libaal_mtk \
-    libaiawb_moon \
-    libaiawb_p1ggm \
-    libaiawb_sun \
-    libaibc_tuning \
-    libaibc_tuning_p2 \
-    libaibc_tuning_p3 \
-    libaibc_tuning_p4 \
-    libaidepth_tuning \
     libaipe_bokeh \
     libalsautils-v31 \
-    libamipengine \
-    libanc_dc_base \
     libanc_hdr \
     libanc_hdr_adapter_hi1631q_17201701_front_g97 \
     libanc_hdr_adapter_hi1634q_17201821_front_g97 \
@@ -960,11 +808,6 @@ PRODUCT_PACKAGES += \
     libapu_mdw_batch \
     libapusys \
     libapusys_edma \
-    libarcsoft_high_dynamic_range \
-    libarcsoft_low_light_hdr \
-    libarcsoft_low_light_shot \
-    libarcsoft_night_hawk \
-    libarcsoft_torch_portrait_night \
     libarmnn \
     libarmnn_ndk.mtk.vndk \
     libasn1c_core \
@@ -988,39 +831,10 @@ PRODUCT_PACKAGES += \
     libbluetooth_mtk_pure \
     libbt-vendor \
     libc++_shared \
-    libcalculatesharpness \
-    libcam.afhal \
-    libcam.chdr \
-    libcam.feature_utils \
-    libcam.hal3a.cctsvr \
-    libcam.hal3a.log \
-    libcam.hal3a.v3.ae \
-    libcam.hal3a.v3.ai3a \
-    libcam.hal3a.v3.awb \
-    libcam.hal3a.v3.dng \
-    libcam.hal3a.v3.fsmgr \
-    libcam.hal3a.v3.lscMgr \
-    libcam.hal3a.v3.lsctbl.50 \
-    libcam.hal3a.v3.nvram.50 \
-    libcam.hal3a.v3.platform \
-    libcam.hal3a.v3.resultpool \
-    libcam.hal3a.v3 \
-    libcam.halisp.buf \
-    libcam.halisp.common \
-    libcam.halisp \
-    libcam.halsensor.hwintegration \
-    libcam.halsensor \
-    libcam.iopipe \
-    libcam.isptuning \
-    libcam.pdtblgen \
     libcam.seninfn3d \
-    libcam.tuning.cache \
-    libcam.utils.sensorprovider \
-    libcam.vhdr \
     libcam3_tranelapsedtime \
     libcam3_tranpriorityctrl \
     libcam3_transerverengine \
-    libcam3atms_profiles \
     libcam_STcallbackHelper_utils \
     libcamalgo.3dnr \
     libcamalgo.WarpMapResizer \
@@ -1030,35 +844,14 @@ PRODUCT_PACKAGES += \
     libcamalgo.fsc \
     libcamalgo.gyro \
     libcamalgo.hdr10p \
-    libcamalgo.ispfeature \
     libcamalgo.lmv \
-    libcamalgo.lsc \
     libcamalgo.mcnr \
     libcamalgo.n3d \
     libcamalgo.nr \
     libcamalgo.platform \
-    libcamalgo.platform2 \
-    libcamalgo.rotate \
     libcamalgo.utility \
     libcamalgo.vsdofUtil \
-    libcamalgo.vsf \
     libcamalgo.warp \
-    libcamdrv_isp \
-    libcamdrv_tuning_mgr \
-    libcamdrv_twin \
-    libcamera.custom.pd_buf_mgr \
-    libcamera.customae \
-    libcamera.customaf \
-    libcamera.customawb \
-    libcamera.customflk \
-    libcameracustom.camera.3a \
-    libcameracustom.camera.isp \
-    libcameracustom.camera.sensors \
-    libcameracustom.camera_exif \
-    libcameracustom.flashlight \
-    libcameracustom.lens \
-    libcameracustom.plugin \
-    libcameracustom \
     libcares_naptr \
     libcarrierconfig \
     libcmdl \
@@ -1068,29 +861,12 @@ PRODUCT_PACKAGES += \
     libcodec2_mtk_venc \
     libcodec2_vpp_qt_plugin \
     libcodec2_vpp_rs_plugin \
-    libcolorenhance_64 \
-    libcolorlevel \
     libcomposer_ext \
     libconnfem \
     libcustom_nvram \
     libcvsd_mtk \
     libdecrypt \
-    libdenoise \
-    libdip_drv \
-    libdip_postproc \
     libdre \
-    libeffect_hal \
-    libeffecthal.base \
-    libeyedetector \
-    libfacesattribute \
-    libfeature.face \
-    libfeature.stereo.provider \
-    libfeature.vsdof.hal \
-    libfeature_3dnr \
-    libfeature_fsc \
-    libfeature_lmv \
-    libfeature_rss \
-    libfeatureiodrv_mem \
     libfgauge_gm30 \
     libfile_op \
     libforkexecwrap \
@@ -1118,91 +894,22 @@ PRODUCT_PACKAGES += \
     libimgsensorca \
     libimsg_log \
     libispcameraca \
-    libitdfacebeauty \
     libjpeg-alpha-oal_vendor \
     libjpeg-alpha_vendor \
     libkmsetkey \
     libksensor \
-    liblpcnr \
-    libmagicsky_64 \
     libminizip \
     libmipc \
     libmmagent \
     libmml \
     libmnetlink_v104 \
-    libmorpho_video_stabilizer \
-    libmpbase \
     libmsbc_mtk \
-    libmsnr \
     libmtk-fusion-ril-prop-vsim \
     libmtk-ril \
     libmtkares \
-    libmtkcam.atmseventmgr \
-    libmtkcam.eventcallback \
-    libmtkcam.featurepipe.capture \
-    libmtkcam.featurepipe.depthmap \
-    libmtkcam.featurepipe.streaming \
-    libmtkcam.featurepipe.vsdof_util \
-    libmtkcam.logicalmodule \
-    libmtkcam_3rdparty.core \
-    libmtkcam_3rdparty.customer \
-    libmtkcam_3rdparty.mtk \
-    libmtkcam_3rdparty \
     libmtkcam_3rdparty.thread \
-    libmtkcam_calibration_convertor \
-    libmtkcam_calibration_provider \
-    libmtkcam_debugutils \
-    libmtkcam_device3_app \
-    libmtkcam_device3_hal \
-    libmtkcam_device3_hidl \
-    libmtkcam_device3_hidlutils \
-    libmtkcam_device3_utils \
-    libmtkcam_devicesessionpolicy \
-    libmtkcam_diputils \
-    libmtkcam_exif \
     libmtkcam_fdWarpConvert \
-    libmtkcam_fdvt \
-    libmtkcam_featurepolicy \
-    libmtkcam_featureutils \
-    libmtkcam_fwkutils \
-    libmtkcam_grallocutils \
-    libmtkcam_hwnode \
-    libmtkcam_hwutils \
-    libmtkcam_imem \
-    libmtkcam_imgbuf \
-    libmtkcam_mapping_mgr \
-    libmtkcam_metadata \
-    libmtkcam_metastore \
-    libmtkcam_mfb \
-    libmtkcam_modulefactory_aaa \
-    libmtkcam_modulefactory_custom \
-    libmtkcam_modulefactory_drv \
-    libmtkcam_modulefactory_utils \
-    libmtkcam_modulehelper \
-    libmtkcam_owe \
-    libmtkcam_pipeline \
-    libmtkcam_pipeline_fbm \
-    libmtkcam_pipelinemodel \
-    libmtkcam_pipelinemodel_adapter \
-    libmtkcam_pipelinemodel_capture \
-    libmtkcam_pipelinemodel_isp \
-    libmtkcam_pipelinemodel_session \
-    libmtkcam_pipelinemodel_utils \
-    libmtkcam_pipelinemodel_zsl \
     libmtkcam_pipelinepolicy-aov \
-    libmtkcam_pipelinepolicy-security \
-    libmtkcam_pipelinepolicy-smvr \
-    libmtkcam_pipelinepolicy \
-    libmtkcam_pipelinepolicy_factory \
-    libmtkcam_prerelease \
-    libmtkcam_rsc \
-    libmtkcam_scenariorecorder \
-    libmtkcam_stdutils \
-    libmtkcam_streamutils \
-    libmtkcam_synchelper \
-    libmtkcam_sysutils \
-    libmtkcam_tuning_utils \
-    libmtkcam_ulog \
     libmtkconfig \
     libmtkconfigutils \
     libmtkhardware_legacy \
@@ -1242,39 +949,23 @@ PRODUCT_PACKAGES += \
     libnxp_extamp_intf \
     liboemcrypto \
     libpn557_fw \
-    libportrait_repair_ppl3_ocl \
     libpower_timer \
     libpqframework \
     libratconfig \
-    libremosaic_wrapper \
     librgbwlightsensor \
     librilfusion \
     librpc \
     librt_extamp_intf \
-    libsdk_sr \
-    libsegmention \
-    libsegmentionPre \
     libskhynix_q2b_shared \
-    libsmartdetector \
     libspeech_enh_lib \
     libspeechparser_vendor \
-    libst_mobile \
-    libst_sr_models \
-    libstblur_capture_api \
-    libstereoinfoaccessor_vsdof \
     libstorage_otp \
     libsysenv \
-    libtf_asd_lib \
     libtflite_mtk \
-    libtflite_native_gainference \
-    libtflite_native_inference \
-    libtflite_native_seginference \
     libtlcWidevineModularDrm \
     libtnev \
     libtrancamJsonConvertor \
     libtrancam_filelockmgr \
-    libtranssion_bodybeauty \
-    libtranssion_cal \
     libtrm \
     libudf \
     liburee_meta_drmkeyinstall \
@@ -1290,28 +981,334 @@ PRODUCT_PACKAGES += \
     libvow_ap_test_nn \
     libvpu \
     libvpu5 \
-    libwa_depth \
-    libwa_dof \
-    libwa_refocus \
-    libwa_rtdof \
     libwifi-hal-mtk \
     libwpfa \
     libwvhidl \
     libwvdrmengine \
+    fake_serial_yuv_IdxMgr \
+    fake_serial_yuv_tuning \
+    gc02m1_mipi_raw_IdxMgr \
+    gc02m1_mipi_raw_tuning \
+    hi1631q_mipi_raw_IdxMgr \
+    hi1631q_mipi_raw_tuning \
+    hi1634q_mipi_raw_IdxMgr \
+    hi1634q_mipi_raw_tuning \
+    lib3a.ae.core \
+    lib3a.ae \
+    lib3a.ae.stat \
+    lib3a.af.assist \
+    lib3a.af.assist.utils \
+    lib3a.af.core \
+    lib3a.af \
+    lib3a.aishutter.models \
+    lib3a.alsflicker \
+    lib3a.awb.core \
+    lib3a.ccudrv \
+    lib3a.ccuif \
+    lib3a.custom.ae \
+    lib3a.dce \
+    lib3a.flash \
+    lib3a.flicker \
+    lib3a.gma \
+    lib3a.lce \
+    lib3a.log \
+    lib3a.n3d3a \
+    lib3a.sensors.color \
+    lib3a.sensors.flicker \
+    libCamera_fakeserialyuv_E2EHDR_Preview \
+    libCamera_fakeserialyuv_E2EHDR_Video \
+    libCamera_fakeserialyuv_Face_Capture \
+    libCamera_fakeserialyuv_Flash_Capture \
+    libCamera_fakeserialyuv_HDR_Capture \
+    libCamera_fakeserialyuv_HDR_Preview \
+    libCamera_fakeserialyuv_HDR_Reconfig_Preview \
+    libCamera_fakeserialyuv_HDR_Reconfig_Video \
+    libCamera_fakeserialyuv_HDR_Video \
+    libCamera_fakeserialyuv_N3D_Capture \
+    libCamera_fakeserialyuv_N3D_Preview \
+    libCamera_fakeserialyuv_N3D_Video \
+    libCamera_fakeserialyuv_P1_YUV \
+    libCamera_fakeserialyuv_Scene_Capture \
+    libCamera_fakeserialyuv_Scene_Capture_4cell \
+    libCamera_fakeserialyuv_Scene_Preview \
+    libCamera_fakeserialyuv_Scene_Preview_4k \
+    libCamera_fakeserialyuv_Scene_Preview_ZSD_Flash \
+    libCamera_fakeserialyuv_Video_1080 \
+    libCamera_fakeserialyuv_Video_4k \
+    libCamera_gc02m1mipiraw_Scene_Capture \
+    libCamera_gc02m1mipiraw_Scene_Preview \
+    libCamera_hi1631qmipiraw_Flash_Capture \
+    libCamera_hi1631qmipiraw_Scene_Capture \
+    libCamera_hi1631qmipiraw_Scene_Capture_4cell \
+    libCamera_hi1631qmipiraw_Scene_Preview \
+    libCamera_hi1631qmipiraw_Video_1080 \
+    libCamera_hi1634qmipiraw_Flash_Capture \
+    libCamera_hi1634qmipiraw_Scene_Capture \
+    libCamera_hi1634qmipiraw_Scene_Capture_4cell \
+    libCamera_hi1634qmipiraw_Scene_Preview \
+    libCamera_hi1634qmipiraw_Video_1080 \
+    libCamera_ov64b40mipiraw_Flash_Capture \
+    libCamera_ov64b40mipiraw_Scene_Capture \
+    libCamera_ov64b40mipiraw_Scene_Capture_4cell \
+    libCamera_ov64b40mipiraw_Scene_Preview \
+    libCamera_pblcgc02m1mipiraw_Scene_Capture \
+    libCamera_pblcgc02m1mipiraw_Scene_Preview \
+    libCamera_pblchi1631qmipiraw_Flash_Capture \
+    libCamera_pblchi1631qmipiraw_Scene_Capture \
+    libCamera_pblchi1631qmipiraw_Scene_Capture_4cell \
+    libCamera_pblchi1631qmipiraw_Scene_Preview \
+    libCamera_pblchi1631qmipiraw_Video_1080 \
+    libCamera_pblchi1634qmipiraw_Flash_Capture \
+    libCamera_pblchi1634qmipiraw_Scene_Capture \
+    libCamera_pblchi1634qmipiraw_Scene_Capture_4cell \
+    libCamera_pblchi1634qmipiraw_Scene_Preview \
+    libCamera_pblchi1634qmipiraw_Video_1080 \
+    libCamera_pblcov64b40mipiraw_Flash_Capture \
+    libCamera_pblcov64b40mipiraw_Scene_Capture \
+    libCamera_pblcov64b40mipiraw_Scene_Capture_4cell \
+    libCamera_pblcov64b40mipiraw_Scene_Preview \
+    libCamera_pbrogc02m1mipiraw_Scene_Capture \
+    libCamera_pbrogc02m1mipiraw_Scene_Preview \
+    libCamera_pbrohi1631qmipiraw_Flash_Capture \
+    libCamera_pbrohi1631qmipiraw_Scene_Capture \
+    libCamera_pbrohi1631qmipiraw_Scene_Capture_4cell \
+    libCamera_pbrohi1631qmipiraw_Scene_Preview \
+    libCamera_pbrohi1631qmipiraw_Video_1080 \
+    libCamera_pbrohi1634qmipiraw_Flash_Capture \
+    libCamera_pbrohi1634qmipiraw_Scene_Capture \
+    libCamera_pbrohi1634qmipiraw_Scene_Capture_4cell \
+    libCamera_pbrohi1634qmipiraw_Scene_Preview \
+    libCamera_pbrohi1634qmipiraw_Video_1080 \
+    libCamera_pbroov64b40mipiraw_Flash_Capture \
+    libCamera_pbroov64b40mipiraw_Scene_Capture \
+    libCamera_pbroov64b40mipiraw_Scene_Capture_4cell \
+    libCamera_pbroov64b40mipiraw_Scene_Preview \
     libDR \
+    libImageEval \
+    libNvLutEffect \
+    libSonyIMX230PdafLibrary \
+    libSonyIMX230PdafLibraryWrapper \
+    libSonyIMX338PdafLibrary \
+    libSonyIMX338PdafLibraryWrapper \
+    libSonyIMX386PdafLibrary \
+    libSonyIMX386PdafLibraryWrapper \
+    libSonyIMX519PdafLibrary \
+    libSonyIMX519PdafLibraryWrapper \
+    libTranASD \
+    libTranArcFilter \
+    libTranArcFlashNew \
+    libTranArcHDR \
+    libTranArcLLHDR \
+    libTranArcLowLight \
+    libTranArcNightHawk \
+    libTranAutoColorLevel \
+    libTranBefMakeup \
+    libTranColorEnhance \
+    libTranDenoise \
+    libTranExtImgProc \
+    libTranEyeDetect \
+    libTranGenderDetect \
+    libTranHumanLight \
+    libTranITDFaceBeauty \
+    libTranMSFilter \
+    libTranMagicSky \
+    libTranMegDualDepth \
+    libTranMegDualDepthtoBokeh \
+    libTranMegDualRefocus \
+    libTranPlatHW \
+    libTranSTPRRepair \
+    libTranSTSingleBlur \
+    libTranSlimBody \
+    libTranSmartDetection \
+    libTranSuperResolution \
+    libTran_Log \
+    libTran_mtkPowerAPI \
+    libWaterMarkProc \
+    lib_sr_indep_ocl \
+    libaaa_ltm \
+    libaaa_ltmx \
     libaal_cust_func \
     libaalservice \
-    libaiselector \
+    libaiawb_moon \
+    libaiawb_p1ggm \
+    libaiawb_sun \
+    libaibc_tuning \
+    libaibc_tuning_p2 \
+    libaibc_tuning_p3 \
+    libaibc_tuning_p4 \
+    libaidepth_tuning \
+    libamipengine \
+    libanc_dc_base \
+    libarcsoft_high_dynamic_range \
+    libarcsoft_low_light_hdr \
+    libarcsoft_low_light_shot \
+    libarcsoft_night_hawk \
+    libarcsoft_torch_portrait_night \
+    libcalculatesharpness \
+    libcam.afhal \
+    libcam.chdr \
+    libcam.feature_utils \
+    libcam.hal3a.cctsvr \
+    libcam.hal3a.log \
+    libcam.hal3a.v3.ae \
+    libcam.hal3a.v3.ai3a \
+    libcam.hal3a.v3.awb \
+    libcam.hal3a.v3.dng \
+    libcam.hal3a.v3.fsmgr \
+    libcam.hal3a.v3.lscMgr \
+    libcam.hal3a.v3.lsctbl.50 \
+    libcam.hal3a.v3.nvram.50 \
+    libcam.hal3a.v3.platform \
+    libcam.hal3a.v3.resultpool \
+    libcam.hal3a.v3 \
+    libcam.halisp.buf \
+    libcam.halisp.common \
+    libcam.halisp \
+    libcam.halsensor.hwintegration \
+    libcam.halsensor \
+    libcam.iopipe \
+    libcam.isptuning \
+    libcam.pdtblgen \
+    libcam.tuning.cache \
+    libcam.utils.sensorprovider \
+    libcam.vhdr \
+    libcam3atms_profiles \
+    libcamalgo.ispfeature \
+    libcamalgo.lsc \
+    libcamalgo.platform2 \
+    libcamalgo.rotate \
+    libcamalgo.vsf \
+    libcamdrv_isp \
+    libcamdrv_tuning_mgr \
+    libcamdrv_twin \
+    libcamera.custom.pd_buf_mgr \
+    libcamera.customae \
+    libcamera.customaf \
+    libcamera.customawb \
+    libcamera.customflk \
+    libcameracustom.camera.3a \
+    libcameracustom.camera.isp \
+    libcameracustom.camera.sensors \
+    libcameracustom.camera_exif \
+    libcameracustom.flashlight \
+    libcameracustom.lens \
+    libcameracustom.plugin \
+    libcameracustom \
+    libcolorenhance_64 \
+    libcolorlevel \
+    libdenoise \
+    libdip_drv \
+    libdip_postproc \
     libdpframework \
+    libeffect_hal \
+    libeffecthal.base \
+    libeyedetector \
+    libfacesattribute \
+    libfeature.face \
+    libfeature.stereo.provider \
+    libfeature.vsdof.hal \
+    libfeature_3dnr \
+    libfeature_fsc \
+    libfeature_lmv \
+    libfeature_rss \
+    libfeatureiodrv_mem \
+    libitdfacebeauty \
+    liblpcnr \
+    libmagicsky_64 \
     libmnl \
+    libmorpho_video_stabilizer \
+    libmpbase \
+    libmsnr \
+    libmtkcam.atmseventmgr \
+    libmtkcam.eventcallback \
+    libmtkcam.featurepipe.capture \
+    libmtkcam.featurepipe.depthmap \
+    libmtkcam.featurepipe.streaming \
+    libmtkcam.featurepipe.vsdof_util \
+    libmtkcam.logicalmodule \
+    libmtkcam_3rdparty.core \
+    libmtkcam_3rdparty.customer \
+    libmtkcam_3rdparty.mtk \
+    libmtkcam_3rdparty \
+    libmtkcam_calibration_convertor \
+    libmtkcam_calibration_provider \
+    libmtkcam_debugutils \
+    libmtkcam_device3_app \
+    libmtkcam_device3_hal \
+    libmtkcam_device3_hidl \
+    libmtkcam_device3_hidlutils \
+    libmtkcam_device3_utils \
+    libmtkcam_devicesessionpolicy \
+    libmtkcam_diputils \
+    libmtkcam_exif \
+    libmtkcam_fdvt \
+    libmtkcam_featurepolicy \
+    libmtkcam_featureutils \
+    libmtkcam_fwkutils \
+    libmtkcam_grallocutils \
+    libmtkcam_hwnode \
+    libmtkcam_hwutils \
+    libmtkcam_imem \
+    libmtkcam_imgbuf \
+    libmtkcam_mapping_mgr \
+    libmtkcam_metadata \
+    libmtkcam_metastore \
+    libmtkcam_mfb \
+    libmtkcam_modulefactory_aaa \
+    libmtkcam_modulefactory_custom \
+    libmtkcam_modulefactory_drv \
+    libmtkcam_modulefactory_utils \
+    libmtkcam_modulehelper \
+    libmtkcam_owe \
+    libmtkcam_pipeline \
+    libmtkcam_pipeline_fbm \
+    libmtkcam_pipelinemodel \
+    libmtkcam_pipelinemodel_adapter \
+    libmtkcam_pipelinemodel_capture \
+    libmtkcam_pipelinemodel_isp \
+    libmtkcam_pipelinemodel_session \
+    libmtkcam_pipelinemodel_utils \
+    libmtkcam_pipelinemodel_zsl \
+    libmtkcam_pipelinepolicy-security \
+    libmtkcam_pipelinepolicy-smvr \
+    libmtkcam_pipelinepolicy \
+    libmtkcam_pipelinepolicy_factory \
+    libmtkcam_prerelease \
+    libmtkcam_rsc \
+    libmtkcam_scenariorecorder \
+    libmtkcam_stdutils \
+    libmtkcam_streamutils \
+    libmtkcam_synchelper \
+    libmtkcam_sysutils \
+    libmtkcam_tuning_utils \
+    libmtkcam_ulog \
     libneuralnetworks_sl_driver_mtk_prebuilt \
     libneuron_adapter_mgvi \
     libneuron_runtime.5 \
     libnir_neon_driver \
+    libportrait_repair_ppl3_ocl \
     libpq_cust_base \
     libpq_prot \
     libpqparamparser \
-    libmtkcam_streaminfo_plugin-p1stt \
+    libremosaic_wrapper \
+    libsdk_sr \
+    libsegmention \
+    libsegmentionPre \
+    libsmartdetector \
+    libst_mobile \
+    libst_sr_models \
+    libstblur_capture_api \
+    libstereoinfoaccessor_vsdof \
+    libtf_asd_lib \
+    libtflite_native_gainference \
+    libtflite_native_inference \
+    libtflite_native_seginference \
+    libtranssion_bodybeauty \
+    libtranssion_cal \
+    libwa_depth \
+    libwa_dof \
+    libwa_refocus \
+    libwa_rtdof \
     ov64b40_mipi_raw_IdxMgr \
     ov64b40_mipi_raw_tuning \
     pblcgc02m1_mipi_raw_IdxMgr \
@@ -1330,6 +1327,7 @@ PRODUCT_PACKAGES += \
     pbrohi1634q_mipi_raw_tuning \
     pbroov64b40_mipi_raw_IdxMgr \
     pbroov64b40_mipi_raw_tuning \
+    libmtkcam_streaminfo_plugin-p1stt \
     s5k2lqsx_mipi_raw_IdxMgr \
     s5k4h7_mipi_raw_IdxMgr \
     vendor.fpsensor.hardware.fpsensorhidlsvc@2.0 \
@@ -1421,8 +1419,8 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks-shim-service-mtk \
     android.hardware.secure_element@1.2-service-mediatek \
     android.hardware.security.keymint-service.trustonic \
-    camerahalserver \
     android.hardware.graphics.allocator@4.0-service-mediatek.mt6789 \
+    camerahalserver \
     mtkfusionrild \
     tetheroffloadservice \
     vendor.mediatek.hardware.keymaster_attestation@1.1-service \
@@ -1456,8 +1454,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     vendor_bin_hw_android_hardware_graphics_allocator@4_0-service-mediatek \
+    vendor_bin_hw_camerahalserver \
     vendor_bin_v3avpud \
     vendor_lib_arm_graphics-V1-ndk_platform_so \
+    vendor_lib_libaiselector_so \
     vendor_lib_libmtk_drvb_so \
     vendor_lib_libvcodec_utility_so \
     vendor_lib_libvcodec_utility_v3a_so \
@@ -1470,24 +1470,362 @@ PRODUCT_PACKAGES += \
     vendor_lib64_hw_kmsetkey_default_so \
     vendor_lib64_hw_gatekeeper_trustonic_so \
     vendor_lib64_hw_gatekeeper_default_so \
+    vendor_lib64_hw_android_hardware_camera_provider@2_6-impl-mediatek_so \
     vendor_lib64_hw_android_hardware_graphics_allocator@4_0-impl-mediatek_so \
     vendor_lib64_hw_android_hardware_graphics_mapper@4_0-impl-mediatek_so \
     vendor_lib64_hw_gralloc_common_so \
+    vendor_lib64_hw_vendor_mediatek_hardware_camera_atms@1_0-impl_so \
+    vendor_lib64_hw_vendor_mediatek_hardware_camera_bgservice@1_1-impl_so \
+    vendor_lib64_hw_vendor_mediatek_hardware_camera_ccap@1_0-impl_so \
+    vendor_lib64_hw_vendor_mediatek_hardware_camera_isphal@1_0-impl_so \
+    vendor_lib64_hw_vendor_mediatek_hardware_camera_isphal@1_1-impl_so \
+    vendor_lib64_hw_vendor_mediatek_hardware_camera_lomoeffect@1_0-impl_so \
     vendor_lib64_hw_vendor_mediatek_hardware_pq@2_15-impl_so \
     vendor_lib64_hw_vulkan_mali_so \
     vendor_lib64_hw_sensors_mt6789_so \
     vendor_lib64_arm_graphics-V1-ndk_platform_so \
+    vendor_lib64_fake_serial_yuv_IdxMgr_so \
+    vendor_lib64_fake_serial_yuv_tuning_so \
+    vendor_lib64_gc02m1_mipi_raw_IdxMgr_so \
+    vendor_lib64_gc02m1_mipi_raw_tuning_so \
+    vendor_lib64_hi1631q_mipi_raw_IdxMgr_so \
+    vendor_lib64_hi1631q_mipi_raw_tuning_so \
+    vendor_lib64_hi1634q_mipi_raw_IdxMgr_so \
+    vendor_lib64_hi1634q_mipi_raw_tuning_so \
+    vendor_lib64_lib3a_ae_core_so \
+    vendor_lib64_lib3a_ae_so \
+    vendor_lib64_lib3a_ae_stat_so \
+    vendor_lib64_lib3a_af_assist_so \
+    vendor_lib64_lib3a_af_assist_utils_so \
+    vendor_lib64_lib3a_af_core_so \
+    vendor_lib64_lib3a_af_so \
+    vendor_lib64_lib3a_aishutter_models_so \
+    vendor_lib64_lib3a_alsflicker_so \
+    vendor_lib64_lib3a_awb_core_so \
+    vendor_lib64_lib3a_ccudrv_so \
+    vendor_lib64_lib3a_ccuif_so \
+    vendor_lib64_lib3a_custom_ae_so \
+    vendor_lib64_lib3a_dce_so \
+    vendor_lib64_lib3a_flash_so \
+    vendor_lib64_lib3a_flicker_so \
+    vendor_lib64_lib3a_gma_so \
+    vendor_lib64_lib3a_lce_so \
+    vendor_lib64_lib3a_log_so \
+    vendor_lib64_lib3a_n3d3a_so \
+    vendor_lib64_lib3a_sensors_color_so \
+    vendor_lib64_lib3a_sensors_flicker_so \
+    vendor_lib64_libCamera_fakeserialyuv_E2EHDR_Preview_so \
+    vendor_lib64_libCamera_fakeserialyuv_E2EHDR_Video_so \
+    vendor_lib64_libCamera_fakeserialyuv_Face_Capture_so \
+    vendor_lib64_libCamera_fakeserialyuv_Flash_Capture_so \
+    vendor_lib64_libCamera_fakeserialyuv_HDR_Capture_so \
+    vendor_lib64_libCamera_fakeserialyuv_HDR_Preview_so \
+    vendor_lib64_libCamera_fakeserialyuv_HDR_Reconfig_Preview_so \
+    vendor_lib64_libCamera_fakeserialyuv_HDR_Reconfig_Video_so \
+    vendor_lib64_libCamera_fakeserialyuv_HDR_Video_so \
+    vendor_lib64_libCamera_fakeserialyuv_N3D_Capture_so \
+    vendor_lib64_libCamera_fakeserialyuv_N3D_Preview_so \
+    vendor_lib64_libCamera_fakeserialyuv_N3D_Video_so \
+    vendor_lib64_libCamera_fakeserialyuv_P1_YUV_so \
+    vendor_lib64_libCamera_fakeserialyuv_Scene_Capture_so \
+    vendor_lib64_libCamera_fakeserialyuv_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_fakeserialyuv_Scene_Preview_so \
+    vendor_lib64_libCamera_fakeserialyuv_Scene_Preview_4k_so \
+    vendor_lib64_libCamera_fakeserialyuv_Scene_Preview_ZSD_Flash_so \
+    vendor_lib64_libCamera_fakeserialyuv_Video_1080_so \
+    vendor_lib64_libCamera_fakeserialyuv_Video_4k_so \
+    vendor_lib64_libCamera_gc02m1mipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_gc02m1mipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_hi1631qmipiraw_Flash_Capture_so \
+    vendor_lib64_libCamera_hi1631qmipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_hi1631qmipiraw_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_hi1631qmipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_hi1631qmipiraw_Video_1080_so \
+    vendor_lib64_libCamera_hi1634qmipiraw_Flash_Capture_so \
+    vendor_lib64_libCamera_hi1634qmipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_hi1634qmipiraw_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_hi1634qmipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_hi1634qmipiraw_Video_1080_so \
+    vendor_lib64_libCamera_ov64b40mipiraw_Flash_Capture_so \
+    vendor_lib64_libCamera_ov64b40mipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_ov64b40mipiraw_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_ov64b40mipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_pblcgc02m1mipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_pblcgc02m1mipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_pblchi1631qmipiraw_Flash_Capture_so \
+    vendor_lib64_libCamera_pblchi1631qmipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_pblchi1631qmipiraw_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_pblchi1631qmipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_pblchi1631qmipiraw_Video_1080_so \
+    vendor_lib64_libCamera_pblchi1634qmipiraw_Flash_Capture_so \
+    vendor_lib64_libCamera_pblchi1634qmipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_pblchi1634qmipiraw_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_pblchi1634qmipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_pblchi1634qmipiraw_Video_1080_so \
+    vendor_lib64_libCamera_pblcov64b40mipiraw_Flash_Capture_so \
+    vendor_lib64_libCamera_pblcov64b40mipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_pblcov64b40mipiraw_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_pblcov64b40mipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_pbrogc02m1mipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_pbrogc02m1mipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_pbrohi1631qmipiraw_Flash_Capture_so \
+    vendor_lib64_libCamera_pbrohi1631qmipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_pbrohi1631qmipiraw_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_pbrohi1631qmipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_pbrohi1631qmipiraw_Video_1080_so \
+    vendor_lib64_libCamera_pbrohi1634qmipiraw_Flash_Capture_so \
+    vendor_lib64_libCamera_pbrohi1634qmipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_pbrohi1634qmipiraw_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_pbrohi1634qmipiraw_Scene_Preview_so \
+    vendor_lib64_libCamera_pbrohi1634qmipiraw_Video_1080_so \
+    vendor_lib64_libCamera_pbroov64b40mipiraw_Flash_Capture_so \
+    vendor_lib64_libCamera_pbroov64b40mipiraw_Scene_Capture_so \
+    vendor_lib64_libCamera_pbroov64b40mipiraw_Scene_Capture_4cell_so \
+    vendor_lib64_libCamera_pbroov64b40mipiraw_Scene_Preview_so \
     vendor_lib64_libDR_so \
+    vendor_lib64_libImageEval_so \
+    vendor_lib64_libNvLutEffect_so \
+    vendor_lib64_libSonyIMX230PdafLibrary_so \
+    vendor_lib64_libSonyIMX230PdafLibraryWrapper_so \
+    vendor_lib64_libSonyIMX338PdafLibrary_so \
+    vendor_lib64_libSonyIMX338PdafLibraryWrapper_so \
+    vendor_lib64_libSonyIMX386PdafLibrary_so \
+    vendor_lib64_libSonyIMX386PdafLibraryWrapper_so \
+    vendor_lib64_libSonyIMX519PdafLibrary_so \
+    vendor_lib64_libSonyIMX519PdafLibraryWrapper_so \
+    vendor_lib64_libTranASD_so \
+    vendor_lib64_libTranArcFilter_so \
+    vendor_lib64_libTranArcFlashNew_so \
+    vendor_lib64_libTranArcHDR_so \
+    vendor_lib64_libTranArcLLHDR_so \
+    vendor_lib64_libTranArcLowLight_so \
+    vendor_lib64_libTranArcNightHawk_so \
+    vendor_lib64_libTranAutoColorLevel_so \
+    vendor_lib64_libTranBefMakeup_so \
+    vendor_lib64_libTranColorEnhance_so \
+    vendor_lib64_libTranDenoise_so \
+    vendor_lib64_libTranExtImgProc_so \
+    vendor_lib64_libTranEyeDetect_so \
+    vendor_lib64_libTranGenderDetect_so \
+    vendor_lib64_libTranHumanLight_so \
+    vendor_lib64_libTranITDFaceBeauty_so \
+    vendor_lib64_libTranMSFilter_so \
+    vendor_lib64_libTranMagicSky_so \
+    vendor_lib64_libTranMegDualDepth_so \
+    vendor_lib64_libTranMegDualDepthtoBokeh_so \
+    vendor_lib64_libTranMegDualRefocus_so \
+    vendor_lib64_libTranPlatHW_so \
+    vendor_lib64_libTranSTPRRepair_so \
+    vendor_lib64_libTranSTSingleBlur_so \
+    vendor_lib64_libTranSlimBody_so \
+    vendor_lib64_libTranSmartDetection_so \
+    vendor_lib64_libTranSuperResolution_so \
+    vendor_lib64_libTran_Log_so \
+    vendor_lib64_libTran_mtkPowerAPI_so \
+    vendor_lib64_libWaterMarkProc_so \
+    vendor_lib64_lib_sr_indep_ocl_so \
+    vendor_lib64_libaaa_ltm_so \
+    vendor_lib64_libaaa_ltmx_so \
     vendor_lib64_libaal_cust_func_so \
     vendor_lib64_libaalservice_so \
+    vendor_lib64_libaiawb_moon_so \
+    vendor_lib64_libaiawb_p1ggm_so \
+    vendor_lib64_libaiawb_sun_so \
+    vendor_lib64_libaibc_tuning_so \
+    vendor_lib64_libaibc_tuning_p2_so \
+    vendor_lib64_libaibc_tuning_p3_so \
+    vendor_lib64_libaibc_tuning_p4_so \
+    vendor_lib64_libaidepth_tuning_so \
     vendor_lib64_libaiselector_so \
+    vendor_lib64_libamipengine_so \
+    vendor_lib64_libanc_dc_base_so \
+    vendor_lib64_libarcsoft_high_dynamic_range_so \
+    vendor_lib64_libarcsoft_low_light_hdr_so \
+    vendor_lib64_libarcsoft_low_light_shot_so \
+    vendor_lib64_libarcsoft_night_hawk_so \
+    vendor_lib64_libarcsoft_torch_portrait_night_so \
+    vendor_lib64_libcalculatesharpness_so \
+    vendor_lib64_libcam_afhal_so \
+    vendor_lib64_libcam_chdr_so \
+    vendor_lib64_libcam_feature_utils_so \
+    vendor_lib64_libcam_hal3a_cctsvr_so \
+    vendor_lib64_libcam_hal3a_log_so \
+    vendor_lib64_libcam_hal3a_v3_ae_so \
+    vendor_lib64_libcam_hal3a_v3_ai3a_so \
+    vendor_lib64_libcam_hal3a_v3_awb_so \
+    vendor_lib64_libcam_hal3a_v3_dng_so \
+    vendor_lib64_libcam_hal3a_v3_fsmgr_so \
+    vendor_lib64_libcam_hal3a_v3_lscMgr_so \
+    vendor_lib64_libcam_hal3a_v3_lsctbl_50_so \
+    vendor_lib64_libcam_hal3a_v3_nvram_50_so \
+    vendor_lib64_libcam_hal3a_v3_platform_so \
+    vendor_lib64_libcam_hal3a_v3_resultpool_so \
+    vendor_lib64_libcam_hal3a_v3_so \
+    vendor_lib64_libcam_halisp_buf_so \
+    vendor_lib64_libcam_halisp_common_so \
+    vendor_lib64_libcam_halisp_so \
+    vendor_lib64_libcam_halsensor_hwintegration_so \
+    vendor_lib64_libcam_halsensor_so \
+    vendor_lib64_libcam_iopipe_so \
+    vendor_lib64_libcam_isptuning_so \
+    vendor_lib64_libcam_pdtblgen_so \
+    vendor_lib64_libcam_tuning_cache_so \
+    vendor_lib64_libcam_utils_sensorprovider_so \
+    vendor_lib64_libcam_vhdr_so \
+    vendor_lib64_libcam3atms_profiles_so \
+    vendor_lib64_libcamalgo_ispfeature_so \
+    vendor_lib64_libcamalgo_lsc_so \
+    vendor_lib64_libcamalgo_platform2_so \
+    vendor_lib64_libcamalgo_rotate_so \
+    vendor_lib64_libcamalgo_vsf_so \
+    vendor_lib64_libcamdrv_isp_so \
+    vendor_lib64_libcamdrv_tuning_mgr_so \
+    vendor_lib64_libcamdrv_twin_so \
+    vendor_lib64_libcamera_custom_pd_buf_mgr_so \
+    vendor_lib64_libcamera_customae_so \
+    vendor_lib64_libcamera_customaf_so \
+    vendor_lib64_libcamera_customawb_so \
+    vendor_lib64_libcamera_customflk_so \
+    vendor_lib64_libcameracustom_camera_3a_so \
+    vendor_lib64_libcameracustom_camera_isp_so \
+    vendor_lib64_libcameracustom_camera_sensors_so \
+    vendor_lib64_libcameracustom_camera_exif_so \
+    vendor_lib64_libcameracustom_flashlight_so \
+    vendor_lib64_libcameracustom_lens_so \
+    vendor_lib64_libcameracustom_plugin_so \
+    vendor_lib64_libcameracustom_so \
+    vendor_lib64_libcolorenhance_64_so \
+    vendor_lib64_libcolorlevel_so \
+    vendor_lib64_libdenoise_so \
+    vendor_lib64_libdip_drv_so \
+    vendor_lib64_libdip_postproc_so \
     vendor_lib64_libdpframework_so \
+    vendor_lib64_libeffect_hal_so \
+    vendor_lib64_libeffecthal_base_so \
+    vendor_lib64_libeyedetector_so \
+    vendor_lib64_libfacesattribute_so \
+    vendor_lib64_libfeature_face_so \
+    vendor_lib64_libfeature_stereo_provider_so \
+    vendor_lib64_libfeature_vsdof_hal_so \
+    vendor_lib64_libfeature_3dnr_so \
+    vendor_lib64_libfeature_fsc_so \
+    vendor_lib64_libfeature_lmv_so \
+    vendor_lib64_libfeature_rss_so \
+    vendor_lib64_libfeatureiodrv_mem_so \
+    vendor_lib64_libitdfacebeauty_so \
+    vendor_lib64_liblpcnr_so \
+    vendor_lib64_libmagicsky_64_so \
     vendor_lib64_libmnl_so \
+    vendor_lib64_libmorpho_video_stabilizer_so \
+    vendor_lib64_libmpbase_so \
+    vendor_lib64_libmsnr_so \
     vendor_lib64_libmtk_drvb_so \
+    vendor_lib64_libmtkcam_atmseventmgr_so \
+    vendor_lib64_libmtkcam_eventcallback_so \
+    vendor_lib64_libmtkcam_featurepipe_capture_so \
+    vendor_lib64_libmtkcam_featurepipe_depthmap_so \
+    vendor_lib64_libmtkcam_featurepipe_streaming_so \
+    vendor_lib64_libmtkcam_featurepipe_vsdof_util_so \
+    vendor_lib64_libmtkcam_logicalmodule_so \
+    vendor_lib64_libmtkcam_3rdparty_core_so \
+    vendor_lib64_libmtkcam_3rdparty_customer_so \
+    vendor_lib64_libmtkcam_3rdparty_mtk_so \
+    vendor_lib64_libmtkcam_3rdparty_so \
+    vendor_lib64_libmtkcam_calibration_convertor_so \
+    vendor_lib64_libmtkcam_calibration_provider_so \
+    vendor_lib64_libmtkcam_debugutils_so \
+    vendor_lib64_libmtkcam_device3_app_so \
+    vendor_lib64_libmtkcam_device3_hal_so \
+    vendor_lib64_libmtkcam_device3_hidl_so \
+    vendor_lib64_libmtkcam_device3_hidlutils_so \
+    vendor_lib64_libmtkcam_device3_utils_so \
+    vendor_lib64_libmtkcam_devicesessionpolicy_so \
+    vendor_lib64_libmtkcam_diputils_so \
+    vendor_lib64_libmtkcam_exif_so \
+    vendor_lib64_libmtkcam_fdvt_so \
+    vendor_lib64_libmtkcam_featurepolicy_so \
+    vendor_lib64_libmtkcam_featureutils_so \
+    vendor_lib64_libmtkcam_fwkutils_so \
+    vendor_lib64_libmtkcam_grallocutils_so \
+    vendor_lib64_libmtkcam_hwnode_so \
+    vendor_lib64_libmtkcam_hwutils_so \
+    vendor_lib64_libmtkcam_imem_so \
+    vendor_lib64_libmtkcam_imgbuf_so \
+    vendor_lib64_libmtkcam_mapping_mgr_so \
+    vendor_lib64_libmtkcam_metadata_so \
+    vendor_lib64_libmtkcam_metastore_so \
+    vendor_lib64_libmtkcam_mfb_so \
+    vendor_lib64_libmtkcam_modulefactory_aaa_so \
+    vendor_lib64_libmtkcam_modulefactory_custom_so \
+    vendor_lib64_libmtkcam_modulefactory_drv_so \
+    vendor_lib64_libmtkcam_modulefactory_utils_so \
+    vendor_lib64_libmtkcam_modulehelper_so \
+    vendor_lib64_libmtkcam_owe_so \
+    vendor_lib64_libmtkcam_pipeline_so \
+    vendor_lib64_libmtkcam_pipeline_fbm_so \
+    vendor_lib64_libmtkcam_pipelinemodel_so \
+    vendor_lib64_libmtkcam_pipelinemodel_adapter_so \
+    vendor_lib64_libmtkcam_pipelinemodel_capture_so \
+    vendor_lib64_libmtkcam_pipelinemodel_isp_so \
+    vendor_lib64_libmtkcam_pipelinemodel_session_so \
+    vendor_lib64_libmtkcam_pipelinemodel_utils_so \
+    vendor_lib64_libmtkcam_pipelinemodel_zsl_so \
+    vendor_lib64_libmtkcam_pipelinepolicy-security_so \
+    vendor_lib64_libmtkcam_pipelinepolicy-smvr_so \
+    vendor_lib64_libmtkcam_pipelinepolicy_so \
+    vendor_lib64_libmtkcam_pipelinepolicy_factory_so \
+    vendor_lib64_libmtkcam_prerelease_so \
+    vendor_lib64_libmtkcam_rsc_so \
+    vendor_lib64_libmtkcam_scenariorecorder_so \
+    vendor_lib64_libmtkcam_stdutils_so \
+    vendor_lib64_libmtkcam_streamutils_so \
+    vendor_lib64_libmtkcam_synchelper_so \
+    vendor_lib64_libmtkcam_sysutils_so \
+    vendor_lib64_libmtkcam_tuning_utils_so \
+    vendor_lib64_libmtkcam_ulog_so \
     vendor_lib64_libneuralnetworks_sl_driver_mtk_prebuilt_so \
     vendor_lib64_libneuron_adapter_mgvi_so \
     vendor_lib64_libneuron_runtime_5_so \
     vendor_lib64_libnir_neon_driver_so \
+    vendor_lib64_libportrait_repair_ppl3_ocl_so \
     vendor_lib64_libpq_cust_base_so \
     vendor_lib64_libpq_prot_so \
-    vendor_lib64_libpqparamparser_so
+    vendor_lib64_libpqparamparser_so \
+    vendor_lib64_libremosaic_wrapper_so \
+    vendor_lib64_libsdk_sr_so \
+    vendor_lib64_libsegmention_so \
+    vendor_lib64_libsegmentionPre_so \
+    vendor_lib64_libsmartdetector_so \
+    vendor_lib64_libst_mobile_so \
+    vendor_lib64_libst_sr_models_so \
+    vendor_lib64_libstblur_capture_api_so \
+    vendor_lib64_libstereoinfoaccessor_vsdof_so \
+    vendor_lib64_libtf_asd_lib_so \
+    vendor_lib64_libtflite_native_gainference_so \
+    vendor_lib64_libtflite_native_inference_so \
+    vendor_lib64_libtflite_native_seginference_so \
+    vendor_lib64_libtranssion_bodybeauty_so \
+    vendor_lib64_libtranssion_cal_so \
+    vendor_lib64_libwa_depth_so \
+    vendor_lib64_libwa_dof_so \
+    vendor_lib64_libwa_refocus_so \
+    vendor_lib64_libwa_rtdof_so \
+    vendor_lib64_ov64b40_mipi_raw_IdxMgr_so \
+    vendor_lib64_ov64b40_mipi_raw_tuning_so \
+    vendor_lib64_pblcgc02m1_mipi_raw_IdxMgr_so \
+    vendor_lib64_pblcgc02m1_mipi_raw_tuning_so \
+    vendor_lib64_pblchi1631q_mipi_raw_IdxMgr_so \
+    vendor_lib64_pblchi1631q_mipi_raw_tuning_so \
+    vendor_lib64_pblchi1634q_mipi_raw_IdxMgr_so \
+    vendor_lib64_pblchi1634q_mipi_raw_tuning_so \
+    vendor_lib64_pblcov64b40_mipi_raw_IdxMgr_so \
+    vendor_lib64_pblcov64b40_mipi_raw_tuning_so \
+    vendor_lib64_pbrogc02m1_mipi_raw_IdxMgr_so \
+    vendor_lib64_pbrogc02m1_mipi_raw_tuning_so \
+    vendor_lib64_pbrohi1631q_mipi_raw_IdxMgr_so \
+    vendor_lib64_pbrohi1631q_mipi_raw_tuning_so \
+    vendor_lib64_pbrohi1634q_mipi_raw_IdxMgr_so \
+    vendor_lib64_pbrohi1634q_mipi_raw_tuning_so \
+    vendor_lib64_pbroov64b40_mipi_raw_IdxMgr_so \
+    vendor_lib64_pbroov64b40_mipi_raw_tuning_so \
+    vendor_lib64_mtkcam_libmtkcam_streaminfo_plugin-p1stt_so
